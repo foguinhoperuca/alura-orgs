@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
+import CustomText from '../components/CustomText';
 import topImage from '../../assets/top.png';
 import logo from '../../assets/logo.png'
 
@@ -9,15 +10,15 @@ const width = Dimensions.get('screen').width;
 export default function Basket() {
   return <>
 	<Image source={topImage} style={styles.topImage} />
-	<Text style={styles.title}>Basket Details:</Text>
+	<CustomText style={styles.title}>Basket Details:</CustomText>
 	<View style={styles.basket}>
-	  <Text style={styles.name}>Basket of Vegetables</Text>
+	  <CustomText style={styles.name}>Basket of Vegetables</CustomText>
 	  <View style={styles.farm}>
 		<Image source={logo} style={styles.farmImage} />
-		<Text style={styles.farmName}>Jenny & Jack - an Oliveira & Campos's farm.</Text>
+		<CustomText style={styles.farmName}>XXXJenny & Jack - an Oliveira & Campos's farm.</CustomText>
 	  </View>
-	  <Text style={styles.description}>A basket with carefully selected products from the farm straight to your kitchen.</Text>
-	  <Text style={styles.price}>$40.00</Text>
+	  <CustomText style={styles.description}>A basket with carefully selected products from the farm straight to your kitchen.</CustomText>
+	  <CustomText style={styles.price}>$40.00</CustomText>
 	</View>
   </>;
 }
@@ -45,7 +46,8 @@ const styles = StyleSheet.create({
 	color: "#464646",
 	fontSize: 26,
 	lineHeight: 42,
-	fontFamily: "MontserratBold"
+	fontWeight: "bold"
+	/* , fontFamily: "MontserratBold" */
   },
   farm: {
 	flexDirection: "row",
@@ -58,8 +60,8 @@ const styles = StyleSheet.create({
   farmName: {
 	fontSize: 16,
 	lineHeight: 26,
-	marginLeft: 12,
-	fontFamily: "MontserratRegular"
+	marginLeft: 12
+	/* , fontFamily: "MontserratRegular" */
   },
   description: {
 	color: "#A3A3A3",
