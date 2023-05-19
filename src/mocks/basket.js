@@ -14,8 +14,10 @@ const basket = {
 	logoFarm: logo,
 	nameFarm: "Jenny & Jack - an Oliveira & Campos's farm.",
 	description: "A basket with LOVE and carefully selected oridycts from the farm straight to your kitchen.",
-	price: "$40.00",
-	button: "Buy"
+	price: "$40.00"
+  },
+  button: {
+	label: "Buy NOW!!"
   },
   itens: {
 	title: "Basket's itens",

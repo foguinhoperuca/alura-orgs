@@ -23,5 +23,3 @@ export default function App() {
 	</SafeAreaView>
   );
 }
-
-/* PAREI fazer os desafios do button e eject além de rever a configuração completa do ambiente. Depois tentar rodar o botão. */
