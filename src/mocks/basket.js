@@ -1,9 +1,9 @@
 import logo from '../../assets/logo.png';
-import broccoli from '../../assets/vegetables/broccoli';
-import cucumber from '../../assets/vegetables/cucumber';
-import potato from '../../assets/vegetables/potato';
-import pumpkin from '../../assets/vegetables/pumpkin';
-import tomato from '../../assets/vegetables/tomato';
+import broccoli from '../../assets/vegetables/broccoli.png';
+import cucumber from '../../assets/vegetables/cucumber.png';
+import potato from '../../assets/vegetables/potato.png';
+import pumpkin from '../../assets/vegetables/pumpkin.png';
+import tomato from '../../assets/vegetables/tomato.png';
 
 const basket = {
   top: {
@@ -14,18 +14,19 @@ const basket = {
 	logoFarm: logo,
 	nameFarm: "Jenny & Jack - an Oliveira & Campos's farm.",
 	description: "A basket with LOVE and carefully selected oridycts from the farm straight to your kitchen.",
-	price: "$40.00"
+	price: "$40.00",
+	button: "Buy"
   },
   itens: {
 	title: "Basket's itens",
 	list: [
 	  {
 		name: "Broccoli",
-		image: broccolli
+		image: broccoli
 	  },
 	  {
 		name: "Cucumber",
-		image: Cucumber
+		image: cucumber
 	  },
 	  {
 		name: "Potato",

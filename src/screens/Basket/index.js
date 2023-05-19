@@ -1,15 +1,27 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 
+import CustomText from '../../components/CustomText';
 import Top from './components/Top';
 import Details from './components/Details';
+import Item from './components/Item'
 
-export default function Basket({ top, details }) {
+export default function Basket({ top, details, itens }) {
   return <>
-	<Top {...top} />
-	<View style={styles.basket}>
-	  <Details {...details} />
-	</View>
+	<FlatList
+	  data={itens.list}
+	  renderItem={Item}
+	  keyExtractor={({ name }) => name }
+	  ListHeaderComponent={() => {
+		return <>
+		  <Top {...top} />
+		  <View style={styles.basket}>
+			<Details {...details} />
+			<CustomText style={styles.title}>{ itens.title }</CustomText>
+		  </View>
+		</>
+	  }}
+	/>
   </>;
 };
 

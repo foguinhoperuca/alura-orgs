@@ -1,9 +1,9 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import CustomText from '../../../components/CustomText';
 
-export default function Details({ name, logoFarm, nameFarm, description, price }) {
+export default function Details({ name, logoFarm, nameFarm, description, price, button }) {
   return <>
 	<CustomText style={styles.name}>{ name }</CustomText>
 	<View style={styles.farm}>
@@ -12,6 +12,10 @@ export default function Details({ name, logoFarm, nameFarm, description, price }
 	</View>
 	<CustomText style={styles.description}>{ description }</CustomText>
 	<CustomText style={styles.price}>{ price }</CustomText>
+
+	<TouchableOpacity style={styles.button} onPress={() => {} }>
+	  <CustomText style={styles.textButton}>{ button }</CustomText>
+	</TouchableOpacity>
   </>;
 };
 
@@ -48,5 +52,18 @@ const styles = StyleSheet.create({
 	fontSize: 26,
 	lineHeight: 42,
 	marginTop: 8
+  },
+  button: {
+	marginTop: 16,
+	backgroundColor: "#2A9F85",
+	paddingVertical: 16,
+	borderRadius: 6
+  },
+  textButton: {
+	textAlign: "center",
+	color: "#ffffff",
+	fontSize: 32,
+	lineHeight: 32,
+	fontWeight: "bold"
   }
 });

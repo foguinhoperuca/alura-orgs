@@ -17,9 +17,11 @@ export default function App() {
   }
 
   return (
-	<SafeAreaView>
+	<SafeAreaView style={{ flex: 1 }}>
 	  <StatusBar />
 	  <Basket {...mock} />
 	</SafeAreaView>
   );
 }
+
+/* PAREI fazer os desafios do button e eject além de rever a configuração completa do ambiente. Depois tentar rodar o botão. */
