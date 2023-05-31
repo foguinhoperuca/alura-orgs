@@ -1,22 +1,26 @@
-import React, {useState} from 'react';
+import React, {useReducer, useMemo} from 'react';
 import {View, TouchableOpacity, Text, Image, StyleSheet} from 'react-native';
 
 import Stars from '../../../components/Stars';
 
+const getDistance = distance => {
+  console.log('Original distance: ' + distance);
+  return `${distance}mt`;
+};
+
 export default function Farmer({name, image, distance, stars}) {
-  const [selected, setSelected] = useState(false);
+  const [selected, invertSelected] = useReducer(select => !select, false);
+  const dist = useMemo(() => getDistance(distance), [distance]);
 
   return (
-    <TouchableOpacity
-      style={styles.card}
-      onPress={() => setSelected(!selected)}>
+    <TouchableOpacity style={styles.card} onPress={invertSelected}>
       <Image source={image} style={styles.image} acessibilityLabel={name} />
       <View style={styles.informations}>
         <View>
           <Text style={styles.name}>{name}</Text>
           <Stars quantity={stars} editable={selected} big={selected} />
         </View>
-        <Text style={styles.distance}>{distance}</Text>
+        <Text style={styles.distance}>{dist}</Text>
       </View>
     </TouchableOpacity>
   );

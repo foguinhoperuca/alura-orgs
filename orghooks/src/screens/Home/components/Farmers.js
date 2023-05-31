@@ -1,18 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {FlatList, Text, StyleSheet} from 'react-native';
 
 import Farmer from './Farmer';
-import {loadFarmers} from '../../../services/loadData';
+import useFarmers from '../../../hooks/useFarmers';
 
 export default function Farmers({top: Top}) {
-  const [title, setTitle] = useState('');
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    const returnFarmers = loadFarmers();
-    setTitle(returnFarmers.title);
-    setList(returnFarmers.list);
-  }, []);
+  const [title, list] = useFarmers();
 
   /* TODO move it to a specific component */
   const TopList = () => {
