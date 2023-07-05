@@ -3,6 +3,7 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 
 import {loadTop} from '../../../services/loadData';
 import logo from '../../../assets/logo.png';
+import CustomText from '../../../components/CustomText';
 
 class Top extends React.Component {
   state = {
@@ -27,6 +28,7 @@ class Top extends React.Component {
         <Image source={logo} style={styles.image} />
         <Text style={styles.greentings}>{this.state.top.greetings}</Text>
         <Text style={styles.legend}>{this.state.top.legend}</Text>
+        <CustomText style={styles.name}>All Rank</CustomText>
       </View>
     );
   }
@@ -52,6 +54,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: '#A3A3A3',
+  },
+  name: {
+    color: '#464646',
+    fontSize: 26,
+    lineHeight: 42,
+    fontWeight: 'bold',
   },
 });
 

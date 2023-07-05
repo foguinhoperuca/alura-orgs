@@ -1,12 +1,15 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
-import Home from './src/screens/Home';
+/* import Home from './src/screens/Home'; */
+import AppRoute from './src/routes/AppRoute';
 
 function App() {
   return (
     <SafeAreaView style={styles.screen}>
-      <Home />
+      <StatusBar />
+      {/* <Home /> */}
+      <AppRoute />
     </SafeAreaView>
   );
 }
